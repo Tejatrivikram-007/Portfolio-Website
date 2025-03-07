@@ -840,6 +840,7 @@ button:hover {
 
 }
 
+
 @media screen and (max-width: 480px) {
     .home_container {
         margin-left: -250px;
@@ -982,4 +983,98 @@ button:hover {
         top: 450px;
     }
     
+}
+@media screen and (max-width: 411px) and (min-width: 360px) {
+    /* Adjust the layout for 6.6 inch screens */
+    
+    .home_container {
+        flex-direction: column; /* Stack the content */
+        gap: 1rem;
+        padding: 2rem 1rem; /* Adjust the padding */
+    }
+
+    .left_container {
+        padding: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    .right_container {
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pic {
+        max-width: 320px; /* Adjust the image size */
+    }
+
+    .hi {
+        font-size: 1.4rem; /* Adjust text size */
+    }
+
+    .name {
+        font-size: 2rem; /* Adjust text size */
+    }
+
+    .dev {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    .para {
+        font-size: 1.1rem;
+        font-weight: 600;
+        width: 100%; /* Full width for text */
+        text-align: center;
+    }
+
+    .neon-btn {
+        font-size: 12px; /* Adjust button size */
+        padding: 10px 20px;
+    }
+
+    .skills-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .skill {
+        width: 100px; /* Adjust skill icon size */
+        height: 100px;
+    }
+
+    .carousel-item {
+        min-width: 210px;
+        height: 200px; /* Adjust carousel items for smaller screens */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack the contact form */
+        gap: 10px;
+    }
+
+    .contact_form button {
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 200px; /* Adjust map size */
+    }
+
+    #find_me h2 {
+        font-size: 1.5rem; 
+    }
+
+    .social_links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .modal-content {
+        max-width: 100%;
+    }
+
 }
