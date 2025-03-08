@@ -740,6 +740,7 @@ body {
         width: 100%; 
     }
     .skills-container {
+
         justify-content: center;
         gap: 20px;
     }
@@ -890,15 +891,15 @@ body {
         font-size: 16px;
     }
     .project-item img {
-        height: 150px; /* Adjust image height for smaller screens */
+        height: 150px; 
     }
 
     .project-item h3 {
-        font-size: 1.1rem; /* Adjust title font size */
+        font-size: 1.1rem;
     }
 
     .project-item p {
-        font-size: 0.9rem; /* Adjust description font size */
+        font-size: 0.9rem; 
     }
 
     .project-link {
@@ -968,19 +969,15 @@ body {
     
 }
 @media screen and (max-width: 360px) {
-    /* General adjustments for small screens (360px width) */
-    body {
-        font-size: 14px; /* Adjust base font size */
-    }
-
+   
     .home_container {
         flex-direction: column;
-        padding: 1rem;  /* Adjust padding for small screens */
+        padding: 1rem;  
     }
 
     .right_container, .left_container {
         flex: 1;
-        text-align: center; /* Centering content */
+        text-align: center; 
     }
 
     .pic {
@@ -990,42 +987,41 @@ body {
     }
 
     .hi {
-        font-size: 1.2rem; /* Smaller text size for the greeting */
+        font-size: 1.2rem; 
     }
 
     .name {
-        font-size: 1.8rem; /* Adjusted font size for the name */
+        font-size: 1.8rem; 
     }
 
     .dev {
-        font-size: 1.2rem; /* Adjusted font size for the description */
+        font-size: 1.2rem; 
     }
 
     .para {
-        font-size: 1rem; /* Adjust paragraph text size */
-        max-width: 100%;  /* Ensure text wraps properly */
+        font-size: 1rem; 
+        max-width: 100%; 
     }
 
     .skills-container {
         justify-content: center;
-        gap: 15px;  /* Reduce gap between skills */
+        gap: 15px;  
     }
-
     .skill {
-        width: 80px; /* Smaller skill boxes */
+        width: 80px;
         height: 80px;
     }
 
     .project-item img {
-        height: 150px; /* Adjust image height for smaller screens */
+        height: 150px; 
     }
 
     .project-item h3 {
-        font-size: 1.2rem; /* Adjust title font size for projects */
+        font-size: 1.2rem;
     }
 
     .project-item p {
-        font-size: 0.9rem; /* Adjust description font size for projects */
+        font-size: 0.9rem;
     }
 
     .project-link {
@@ -1042,13 +1038,12 @@ body {
         padding: 12px;
     }
 
-    /* Adjusting the footer/social media section */
     .social_links {
         gap: 10px;
-        font-size: 20px;  /* Adjust icon size */
+        font-size: 20px; 
     }
 
-    /* Adjust form inputs for smaller screens */
+    
     .contact_form input, .contact_form textarea {
         font-size: 0.9rem;
         padding: 10px;
@@ -1064,9 +1059,113 @@ body {
         padding: 15px;
     }
 
-    /* Other layout adjustments for small screens */
     .modal-content {
         top: 200px;
         width: 80%;
+    }
+    footer{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 320px) {
+    
+    body {
+        font-size: 12px; 
+        padding: 0;
+    }
+
+    .home_container {
+        flex-direction: column;
+        padding: 0.5rem;  
+    }
+
+    .right_container, .left_container {
+        flex: 1;
+        text-align: center; 
+    }
+
+    .pic {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .hi {
+        font-size: 1rem; 
+    }
+
+    .name {
+        font-size: 1.5rem; 
+    }
+
+    .dev {
+        font-size: 1rem;
+    }
+
+    .para {
+        font-size: 0.9rem; 
+        max-width: 100%; 
+    }
+
+    .skills-container {
+        justify-content: center;
+        gap: 10px;  
+    }
+
+    .skill {
+        width: 80px; 
+        height: 80px;
+    }
+
+    .project-item img {
+        height: 130px; 
+    }
+
+    .project-item h3 {
+        font-size: 1rem; 
+    }
+
+    .project-item p {
+        font-size: 0.8rem; 
+    }
+
+    .project-link {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    #contact {
+        padding: 15px 5%;
+    }
+
+    .contact_form button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .social_links {
+        gap: 8px;
+        font-size: 18px;  
+    }
+
+    
+    .contact_form input, .contact_form textarea {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 130px;
+    }
+
+    .address-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .modal-content {
+        top: 180px;
+        width: 85%;
     }
 }
