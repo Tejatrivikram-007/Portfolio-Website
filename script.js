@@ -4,114 +4,99 @@ const projects = [
         title: "Portfolio Website",
         image: "./assets/images/portfolio.png",  
         description: "A personal portfolio website to showcase my skills and projects.",
-        link:"https://www.google.com"
+        link: "https://github.com/Tejatrivikram-007/Portfolio-Website"
     },
     {
         title: "E-commerce Website",
         image: "./assets/images/ecommerce.png",
-        description: "An online store platform with a user-friendly interface and payment integration."
+        description: "An online store platform with a user-friendly interface and payment integration.",
+        link: "https://github.com/Tejatrivikram-007/Shopping-cart"
     },
     {
         title: "Weather App",
         image: "./assets/images/weather.png",
-        description: "A weather application that fetches data from a weather API and displays real-time weather information."
+        description: "A weather application that fetches data from a weather API and displays real-time weather information.",
+        link: "https://github.com/Tejatrivikram-007/Weather-Report"
     },
     {
-        title: "To DO List",
+        title: "To-Do List",
         image: "./assets/images/todo.webp",
-        description: "A to-do application that allows users to add, edit, and delete tasks."
+        description: "A to-do application that allows users to add, edit, and delete tasks.",
+        link: "https://github.com/Tejatrivikram-007/To-Do-List"
     },
     {
         title: "Cafe Website",
         image: "./assets/images/cafe.png",
-        description: "A Cafe Website platform built with HTML, CSS, and JavaScript to sell products online and book appointments."
+        description: "A Cafe Website platform built with HTML, CSS, and JavaScript to sell products online and book appointments.",
+        link: "https://github.com/Tejatrivikram-007/Cafe-Website"
     },
     {
         title: "Coffee Website",
         image: "./assets/images/coffee.png",
-        description: "A Coffee Website platform built with HTML, CSS, and JavaScript to sell products online and book appointments."
+        description: "A Coffee Website platform built with HTML, CSS, and JavaScript to sell products online and book appointments.",
+        link: "https://github.com/Tejatrivikram-007/Cozzy-Beans"
     },
     {
         title: "Qspider's Website",
         image: "./assets/images/qspiders.png",
-        description: "This Qspider's Website provides details of courses and trainer's details."
+        description: "This Qspider's Website provides details of courses and trainer's details.",
+        link: "https://github.com/Tejatrivikram-007/Software-Training-Institute-Website"
     },
     {
-        title: "Course management system",
+        title: "Course Management System",
         image: "./assets/images/course.webp",
-        description: "The Course management system provides details of courses and trainers."
+        description: "The Course Management System provides details of courses and trainers.",
+        link: "https://github.com/Tejatrivikram-007/Course-Management-System"
     },
     {
         title: "Adventure Bikes",
         image: "./assets/images/adventure bike.webp",
-        description: "The Adventure Bikes website provides details of bikes under 350CC in india."
+        description: "The Adventure Bikes website provides details of bikes under 350CC in India.",
+        link: "https://github.com/Tejatrivikram-007/AdventureBikesUnder350CC"
     },
-   
-    
+{
+    title:"Gym Landing page",
+    image:"./assets/images/gym.png",
+    description:'Gym landing page created by using HTML, CSS.',
+    link:"https://github.com/Tejatrivikram-007/Gym_webpage"
+}
 ];
 
-let currentIndex = 0;  // Start from the first project
+// Function to dynamically generate the projects content
+const container = document.getElementById("projects-container");
 
-const container = document.getElementById("carousel-container");
+function displayProjects() {
+    container.innerHTML = "";  // Clear any existing content
 
-function updateCarousel() {
-    console.log('Updating carousel...');
+    projects.forEach(project => {
+        const projectElement = document.createElement("div");
+        projectElement.classList.add("project-item");
 
-    container.innerHTML = "";
+        const image = document.createElement("img");
+        image.src = project.image;
+        image.alt = project.title;
 
-    projects.forEach((project, index) => {
-        const imgWrapper = document.createElement("div");
-        imgWrapper.classList.add("carousel-item");
-
-        const imgElement = document.createElement("img");
-        imgElement.src = project.image;
-        imgWrapper.appendChild(imgElement);
-
-        const scale = (index === currentIndex) ? 1.1 : 0.9;  // Apply scaling effect
-        const opacity = (index === currentIndex) ? 1 : 0.5; // Adjust opacity
-
-        imgWrapper.style.opacity = opacity;
-        imgWrapper.style.transform = `scale(${scale})`; // Apply scale transform
-
-        const infoDiv = document.createElement("div");
-        infoDiv.classList.add("info");
-
-        const title = document.createElement("div");
-        title.classList.add("title");
+        const title = document.createElement("h3");
         title.textContent = project.title;
 
-        const desc = document.createElement("div");
-        desc.classList.add("description");
-        desc.textContent = project.description;
+        const description = document.createElement("p");
+        description.textContent = project.description;
 
-        infoDiv.appendChild(title);
-        infoDiv.appendChild(desc);
-        imgWrapper.appendChild(infoDiv);
+        const linkButton = document.createElement("a");
+        linkButton.href = project.link;
+        linkButton.textContent = "View Project";
+        linkButton.classList.add("project-link");
 
+        projectElement.appendChild(image);
+        projectElement.appendChild(title);
+        projectElement.appendChild(description);
+        projectElement.appendChild(linkButton);
 
-        container.appendChild(imgWrapper);
+        container.appendChild(projectElement);
     });
-
-    // Apply the translateX transformation based on screen size dynamically
-    const carouselWidth = container.offsetWidth;
-    const itemWidth = document.querySelector(".carousel-item").offsetWidth; 
-    const translateXValue = (currentIndex * itemWidth);
-
-    container.style.transform = `translateX(-${translateXValue}px)`;
 }
 
-// Call updateCarousel initially to populate the carousel with the first set of projects
-updateCarousel();
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-    updateCarousel();
-});
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % projects.length;
-    updateCarousel();
-});
+// Call the function to display the projects
 
 // --------------------<< EDUCATION >>--------------------------
 const education = [
@@ -156,7 +141,7 @@ function displayEducation() {
 // ---------------- <<< onload function for both education and projects >>>-------------
 window.onload = function() {    //to display the cards onload function
     
-    updateCarousel(); // Call to display projects and log the update
+    displayProjects(); // Call to display projects and log the update
     displayEducation();
 
 };
