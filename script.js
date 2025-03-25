@@ -16,7 +16,7 @@ const projects = [
         title: "E-commerce Website",
         image: "./assets/images/ecommerce.png",
         description: "An online store platform with a user-friendly interface and payment integration.",
-        link: "click-n-cart.netlify.app"
+        link: "https://click-n-cart.netlify.app/"
     },
     {
         title: "Weather App",
