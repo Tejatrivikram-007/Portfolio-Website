@@ -10,13 +10,13 @@ const projects = [
         title: "Personal Finance Tracker",
         image: "./assets/images/portfolio.png",  
         description: "A personal finance tracker with a user-friendly interface to track finance status.",
-        link: "https://personal-finance-trackerf.onrender.com/login/"
+        link: "https://github.com/Tejatrivikram-007/personal_finance_tracker"
     },
     {
         title: "E-commerce Website",
         image: "./assets/images/ecommerce.png",
         description: "An online store platform with a user-friendly interface and payment integration.",
-        link: "https://click-n-cart.netlify.app/"
+        link: "https://github.com/Tejatrivikram-007/Shopping-cart"
     },
     {
         title: "Weather App",
