@@ -8,9 +8,9 @@ const projects = [
     },
     {
         title: "Personal Finance Tracker",
-        image: "./assets/images/portfolio.png",  
+        image: "placeholder.jpg",  
         description: "A personal finance tracker with a user-friendly interface to track finance status.",
-        link: "https://github.com/Tejatrivikram-007/personal_finance_tracker"
+        link: "https://github.com/Tejatrivikram-007/Personal-Finance-Tracker"
     },
     {
         title: "E-commerce Website",
