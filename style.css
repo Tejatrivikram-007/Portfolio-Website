@@ -511,16 +511,45 @@ body {
 }
 
 .social_links i {
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-}
+        font-size: 35px;
+        color: #d3d3d3; /* Light gray by default */
+        transition: color 0.3s ease;
+    }
 
-/* Hover Effect for Icons */
-.social_links li:hover i {
-    transform: scale(1.1);
-    color: #4CAF50;  /* Green color on hover */
-}
-.modal {
+    .social_links a:hover .fa-linkedin {
+        color: #0077b5;
+    }
+
+    .social_links a:hover .fa-square-github {
+        color: #333;
+    }
+
+    .social_links a:hover .fa-envelope {
+        color: #ea4335;
+    }
+
+    .social_links a:hover .fa-phone {
+        color: #4caf50;
+    }
+
+    .social_links a:hover .fa-whatsapp {
+        color: #25D366;
+    }
+
+    .social_links a:hover .fa-file-lines {
+        color: #f40f02; /* or use any other color for resume */
+    }
+
+    .social_links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+    }
+
+    .social_links li {
+        display: inline-block;
+    }.modal {
     display: none; 
     position: fixed;
     z-index: 1;
@@ -972,7 +1001,7 @@ body {
    
     .home_container {
         flex-direction: column;
-        padding: 1rem;  
+/*         padding: 1rem;   */
     }
 
     .right_container, .left_container {
@@ -1071,7 +1100,7 @@ body {
     
     body {
         font-size: 12px; 
-        padding: 0;
+/*         padding: 0; */
     }
 
     .home_container {
