@@ -43,29 +43,11 @@ const projects = [
         link: "https://github.com/Tejatrivikram-007/Cozzy-Beans"
     },
     {
-        title: "Qspider's Website",
-        image: "./assets/images/qspiders.png",
-        description: "This Qspider's Website provides details of courses and trainer's details.",
-        link: "https://github.com/Tejatrivikram-007/Software-Training-Institute-Website"
-    },
-    {
         title: "Course Management System",
         image: "./assets/images/course.webp",
         description: "The Course Management System provides details of courses and trainers.",
         link: "https://github.com/Tejatrivikram-007/Course-Management-System"
-    },
-    {
-        title: "Adventure Bikes",
-        image: "./assets/images/adventure bike.webp",
-        description: "The Adventure Bikes website provides details of bikes under 350CC in India.",
-        link: "https://github.com/Tejatrivikram-007/AdventureBikesUnder350CC"
-    },
-{
-    title:"Gym Landing page",
-    image:"./assets/images/gym.png",
-    description:'Gym landing page created by using HTML, CSS.',
-    link:"https://github.com/Tejatrivikram-007/Gym_webpage"
-}
+    }
 ];
 
 // Function to dynamically generate the projects content
