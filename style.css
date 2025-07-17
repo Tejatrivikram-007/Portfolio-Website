@@ -861,6 +861,10 @@ body {
         margin-left: -250px;
         gap: 2rem;
     }
+    #skills,#projects,#education,#find_me{
+        margin-left: -250px;
+        gap: 2rem;
+    }
     
     .right .pic {
         max-width: 320px;
