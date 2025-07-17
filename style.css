@@ -862,7 +862,7 @@ body {
         gap: 2rem;
     }
     #skills,#projects,#education,#find_me{
-        margin-left: -250px;
+        margin: 0 auto;
         gap: 2rem;
     }
     
