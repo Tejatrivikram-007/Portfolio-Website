@@ -31,7 +31,7 @@ const projects = [
         description: "Responsive website for a local cafe with online ordering system and reservation functionality.",
         link: "https://github.com/Tejatrivikram-007/Cafe-Website",
         tags: ["HTML", "CSS", "JavaScript"],
-        liveDemo: "#"
+        liveDemo: "https://coffeebrewhaven.netlify.app/"
     },
     {
         title: "Personal Finance Tracker",
