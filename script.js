@@ -1,90 +1,184 @@
-// -------------------------<< PROJECTS >>--------------------------11
+// -------------------------<< PROJECTS >>--------------------------
 const projects = [
     {
         title: "Portfolio Website",
         image: "./assets/images/portfolio.png",  
-        description: "A personal portfolio website to showcase my skills and projects.",
-        link: "https://github.com/Tejatrivikram-007/Portfolio-Website"
+        description: "A personal portfolio website to showcase my skills and projects with responsive design and interactive elements.",
+        link: "https://github.com/Tejatrivikram-007/Portfolio-Website",
+        tags: ["HTML", "CSS", "JavaScript"],
+        liveDemo: "https://portfolio-tejatrivikramv.netlify.app/"
     },
-    {
-        title: "Personal Finance Tracker",
-        image: "./assets/images/Screenshot 2025-03-25 091639.png",  
-        description: "A personal finance tracker with a user-friendly interface to track finance status.",
-        link: "https://github.com/Tejatrivikram-007/Personal-Finance-Tracker"
-    },
+   
     {
         title: "E-commerce Website",
         image: "./assets/images/ecommerce.png",
-        description: "An online store platform with a user-friendly interface and payment integration.",
-        link: "https://github.com/Tejatrivikram-007/Shopping-cart"
+        description: "Interactive e-commerce platform with product catalog, shopping cart, and checkout functionality.",
+        link: "https://github.com/Tejatrivikram-007/Shopping-cart",
+        tags: ["React", "HTML", "CSS"],
+        liveDemo: "https://click-n-cart.netlify.app/"
     },
     {
-        title: "Weather App",
-        image: "./assets/images/weather.png",
-        description: "A weather application that fetches data from a weather API and displays real-time weather information.",
-        link: "https://github.com/Tejatrivikram-007/Weather-Report"
-    },
-    {
-        title: "To-Do List",
-        image: "./assets/images/todo.webp",
-        description: "A to-do application that allows users to add, edit, and delete tasks.",
-        link: "https://github.com/Tejatrivikram-007/To-Do-List"
+        title: "Gym Management System",
+        image: "./assets/images/gym.png",
+        description: "A comprehensive gym management web application with member tracking, workout planning, and payment integration.",
+        link: "https://github.com/Tejatrivikram-007/Gym_webpage",
+        tags: ["HTML", "CSS"],
+        liveDemo: "https://cleanmindfitness.netlify.app/",
     },
     {
         title: "Cafe Website",
         image: "./assets/images/cafe.png",
-        description: "A Cafe Website platform built with HTML, CSS, and JavaScript to sell products online and book appointments.",
-        link: "https://github.com/Tejatrivikram-007/Cafe-Website"
+        description: "Responsive website for a local cafe with online ordering system and reservation functionality.",
+        link: "https://github.com/Tejatrivikram-007/Cafe-Website",
+        tags: ["HTML", "CSS", "JavaScript"],
+        liveDemo: "#"
     },
     {
-        title: "Coffee Website",
-        image: "./assets/images/coffee.png",
-        description: "A Coffee Website platform built with HTML, CSS, and JavaScript to sell products online and book appointments.",
-        link: "https://github.com/Tejatrivikram-007/Cozzy-Beans"
+        title: "Personal Finance Tracker",
+        image: "./assets/images/Screenshot 2025-03-25 091639.png",  
+        description: "Full-stack application for tracking personal finances with expense categorization and visual analytics.",
+        link: "https://github.com/Tejatrivikram-007/Personal-Finance-Tracker",
+        tags: ["Python", "Django", "PostgreSQL"],
+        liveDemo: "https://personal-finance-trackerf.onrender.com/"
     },
+    {
+        title: "Expense Sharing App",
+        image: "./assets/images/splitwise.png",
+        description: "Splitwise clone for managing shared expenses among groups with debt calculation and notifications.",
+        link: "https://github.com/Tejatrivikram-007/splitwise_clone_backend",
+        tags: ["Python", "FastAPI", "React"],
+        liveDemo: "#"
+    },
+    
+    {
+        title: "Task Management App",
+        image: "./assets/images/todo.webp",
+        description: "Productivity application for task management with drag-and-drop interface and due date reminders.",
+        link: "https://github.com/Tejatrivikram-007/To-Do-List",
+        tags: ["React", "Local Storage", "CSS"],
+        liveDemo: "#"
+    },
+    
     {
         title: "Course Management System",
         image: "./assets/images/course.webp",
-        description: "The Course Management System provides details of courses and trainers.",
-        link: "https://github.com/Tejatrivikram-007/Course-Management-System"
-    }
+        description: "Educational platform for course enrollment, progress tracking, and certification.",
+        link: "https://github.com/Tejatrivikram-007/Course-Management-System",
+        tags: ["React", "REST API", "CSS"],
+        liveDemo: "#"
+    },
+    {
+        title: "Coffee Shop Site",
+        image: "./assets/images/coffee.png",
+        description: "E-commerce site for artisanal coffee products with subscription options and gift cards.",
+        link: "https://github.com/Tejatrivikram-007/Cozzy-Beans",
+        tags: ["Bootstrap", "JavaScript", "CSS"],
+        liveDemo: "#"
+    },
+    
 ];
 
-// Function to dynamically generate the projects content
-const container = document.getElementById("projects-container");
 
 function displayProjects() {
-    container.innerHTML = "";  // Clear any existing content
+    const container = document.getElementById("projects-container");
+    container.innerHTML = "";
 
-    projects.forEach(project => {
+    projects.forEach((project, index) => {
         const projectElement = document.createElement("div");
-        projectElement.classList.add("project-item");
-
+        projectElement.classList.add("project-card");
+        
+        projectElement.setAttribute("data-aos", "fade-up");
+        projectElement.setAttribute("data-aos-delay", `${index * 100}`);
+        
+        // Image container
+        const imageContainer = document.createElement("div");
+        imageContainer.classList.add("project-image-container");
+        
         const image = document.createElement("img");
         image.src = project.image;
         image.alt = project.title;
-
+        image.classList.add("project-image");
+        image.loading = "lazy";
+        
+        const overlay = document.createElement("div");
+        overlay.classList.add("project-overlay");
+        
+        // Only show preview button if live demo exists
+        if (project.liveDemo && project.liveDemo !== '#') {
+            const previewButton = document.createElement("a");
+            previewButton.href = project.liveDemo;
+            previewButton.target = "_blank";
+            previewButton.classList.add("preview-button");
+            previewButton.innerHTML = '<i class="fas fa-eye"></i> Quick Preview';
+            overlay.appendChild(previewButton);
+        }
+        
+        imageContainer.appendChild(image);
+        imageContainer.appendChild(overlay);
+        
+        // Content container
+        const content = document.createElement("div");
+        content.classList.add("project-content");
+        
+        // Title
         const title = document.createElement("h3");
         title.textContent = project.title;
-
+        title.classList.add("project-title");
+        
+        // Description
         const description = document.createElement("p");
         description.textContent = project.description;
-
-        const linkButton = document.createElement("a");
-        linkButton.href = project.link;
-        linkButton.textContent = "View Project";
-        linkButton.classList.add("project-link");
-
-        projectElement.appendChild(image);
-        projectElement.appendChild(title);
-        projectElement.appendChild(description);
-        projectElement.appendChild(linkButton);
-
+        description.classList.add("project-description");
+        
+        // Tags container
+        const tagsContainer = document.createElement("div");
+        tagsContainer.classList.add("project-tags");
+        
+        project.tags.forEach(tag => {
+            const tagElement = document.createElement("span");
+            tagElement.classList.add("project-tag");
+            tagElement.textContent = tag;
+            tagsContainer.appendChild(tagElement);
+        });
+        
+        // Links container
+        const linksContainer = document.createElement("div");
+        linksContainer.classList.add("project-links");
+        
+        // GitHub link (always shown)
+        const githubLink = document.createElement("a");
+        githubLink.href = project.link;
+        githubLink.target = "_blank";
+        githubLink.classList.add("project-link", "code-link");
+        githubLink.innerHTML = '<i class="fab fa-github"></i> Source Code';
+        
+        linksContainer.appendChild(githubLink);
+        
+        // Only add Live Demo button if available
+        if (project.liveDemo && project.liveDemo !== '#') {
+            const demoLink = document.createElement("a");
+            demoLink.href = project.liveDemo;
+            demoLink.target = "_blank";
+            demoLink.classList.add("project-link", "demo-link");
+            demoLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Visit';
+            linksContainer.appendChild(demoLink);
+        }
+        
+        // Append all elements to content
+        content.appendChild(title);
+        content.appendChild(description);
+        content.appendChild(tagsContainer);
+        content.appendChild(linksContainer);
+        
+        // Append image and content to project element
+        projectElement.appendChild(imageContainer);
+        projectElement.appendChild(content);
+        
         container.appendChild(projectElement);
     });
 }
 
-// Call the function to display the projects
+window.addEventListener('DOMContentLoaded', displayProjects);
 
 // --------------------<< EDUCATION >>--------------------------
 const education = [
@@ -138,14 +232,20 @@ window.onload = function() {    //to display the cards onload function
 
 const skills = [
     { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+    { name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
     { name: "HTML", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     { name: "CSS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "JavaScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     { name: "React", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     { name: "Bootstrap", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     { name: "Django", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-    { name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "Git", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    // { name: "AWS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+    { name: "Jira", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+    { 
+        name: "GitHub", 
+        img: "./assets/images/github.jpg",
+    },
+    // { name: "Docker", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" }
 ];
 
 const skillContainer = document.getElementById("skillContainer");
@@ -179,3 +279,15 @@ document.getElementById('contact_form').addEventListener('submit', function (e) 
     alert("Thank you for contacting me, " + name + ". We'll get back to you soon!");
     document.getElementById('contact_form').reset();
 });
+
+
+
+
+
+
+
+
+
+
+
+
