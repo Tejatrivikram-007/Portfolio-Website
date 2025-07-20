@@ -27,9 +27,9 @@ const projects = [
     },
     {
         title: "Cafe Website",
-        image: "./assets/images/cafe.png",
+        image: "./assets/images/brew.png",
         description: "Responsive website for a local cafe with online ordering system and reservation functionality.",
-        link: "https://github.com/Tejatrivikram-007/Cafe-Website",
+        link: "https://github.com/Tejatrivikram-007/Coffee-Shop-Website",
         tags: ["HTML", "CSS", "JavaScript"],
         liveDemo: "https://coffeebrewhaven.netlify.app/"
     },
