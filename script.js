@@ -33,6 +33,14 @@ const projects = [
         tags: ["HTML", "CSS", "JavaScript"],
         liveDemo: "https://coffeebrewhaven.netlify.app/"
     },
+     {
+        title: "Restaurant Website",
+        image: "./assets/images/spice route.png",
+        description: "Responsive website for a local restaurant with table reservation functionality.",
+        link: "https://github.com/Tejatrivikram-007/Spice-Route-Restaurant",
+        tags: ["HTML", "CSS", "JavaScript"],
+        liveDemo: "https://spicerouterestaurent.netlify.app/"
+    },
     {
         title: "Personal Finance Tracker",
         image: "./assets/images/Screenshot 2025-03-25 091639.png",  
@@ -67,14 +75,14 @@ const projects = [
         tags: ["React", "REST API", "CSS"],
         liveDemo: "#"
     },
-    {
-        title: "Coffee Shop Site",
-        image: "./assets/images/coffee.png",
-        description: "E-commerce site for artisanal coffee products with subscription options and gift cards.",
-        link: "https://github.com/Tejatrivikram-007/Cozzy-Beans",
-        tags: ["Bootstrap", "JavaScript", "CSS"],
-        liveDemo: "#"
-    },
+    // {
+    //     title: "Coffee Shop Site",
+    //     image: "./assets/images/coffee.png",
+    //     description: "E-commerce site for artisanal coffee products with subscription options and gift cards.",
+    //     link: "https://github.com/Tejatrivikram-007/Cozzy-Beans",
+    //     tags: ["Bootstrap", "JavaScript", "CSS"],
+    //     liveDemo: "#"
+    // },
     
 ];
 
